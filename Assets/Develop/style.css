@@ -15,6 +15,7 @@ body,
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -27,7 +28,39 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: black;
+
+}
+
+.wrapper, password-display{
+  text-align:center;
+  align-items: center;
+  background-color: gray;
+  color: #c0c7cf;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.password-display{
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  align-items: center;
+  text-align: center;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
 }
 
 .card {
@@ -87,6 +120,7 @@ header {
   text-align: center;
   cursor: pointer;
 }
+
 
 button[disabled] {
   cursor: default;
