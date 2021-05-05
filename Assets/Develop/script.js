@@ -1,15 +1,20 @@
+//to tell if the button is ture of false
 const characterAmountNumber = document.getElementById('characterAmountNumber')
 const characterAmountRange = document.getElementById('characterAmountRange')
 const includeUpperCaseElement = document.getElementById('includeUppercase')
 const includeNumbersElement = document.getElementById('includeNumbers')
 const includeSymbolsElement = document.getElementById('includeSymbols')
+//once button is press, password will display 
 const form = document.getElementById('passwordGeneratorForm')
 const passwordDisplay = document.getElementById('passwordDisplay')
 
+//array of function 
 const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
 const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
 const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57)
 const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
+  
+//number and symbols
   arrayFromLowToHigh(58, 64)
 ).concat(
   arrayFromLowToHigh(91, 96)
@@ -20,6 +25,7 @@ const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
 characterAmountNumber.addEventListener('input', syncCharacterAmount)
 characterAmountRange.addEventListener('input', syncCharacterAmount)
 
+//waiting for submit button to be press
 form.addEventListener('submit', e => {
   e.preventDefault()
   const characterAmount = characterAmountNumber.value
@@ -30,6 +36,7 @@ form.addEventListener('submit', e => {
   passwordDisplay.innerText = password
 })
 
+
 function generatePassword(characterAmount, includeUpperCase, includeNumbers,includeSymbols) {
   let charCodes = LOWERCASE_CHAR_CODES 
   if (includeUpperCase) charCodes = charCodes.concat
@@ -37,6 +44,7 @@ function generatePassword(characterAmount, includeUpperCase, includeNumbers,incl
   if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
   if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
 
+//for loop for character list
   const passwordCharacters = []
   for (let i = 0; i < characterAmount; i++) {
     const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
@@ -45,7 +53,7 @@ function generatePassword(characterAmount, includeUpperCase, includeNumbers,incl
   return passwordCharacters.join('')
 }
 
-
+//array function 
 function arrayFromLowToHigh(low,high) {
   const array = []
   for (let i = low; i <= high; i++) {
@@ -53,9 +61,6 @@ function arrayFromLowToHigh(low,high) {
   }
   return array
 }
-
-  
-
 
 function syncCharacterAmount(e){
   const value = e.target.value
