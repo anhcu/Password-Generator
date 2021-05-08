@@ -12,9 +12,10 @@ const passwordDisplay = document.getElementById('passwordDisplay')
 const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
 const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
 const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57)
-const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
+const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47)
   
 //number and symbols
+.concat(
   arrayFromLowToHigh(58, 64)
 ).concat(
   arrayFromLowToHigh(91, 96)
