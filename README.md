@@ -19,3 +19,7 @@ My motivation to come up with an app takes out all the thinking to come up with 
 2. Check boxes that you want to include in your password. <br>
 ** ie. upper case, numbers or symbols.
 3. Last step is to click on "Generator Password."
+
+![alt text](./assets/demo.png)
+![alt text](./assets/demo2.png)
+![alt text](./assets/demo3.png)
