@@ -1,6 +1,6 @@
 # Password generators
 You can view my repository from github here - https://github.com/anhcu/hw-3-password <br>
-My live page - https://anhcu.github.io/hw-3-password/
+My live page - https://anhcu.github.io/Password-Generator/
 
 # Description
 Password generators help a user come up with a unique password with all the needed criteria.
